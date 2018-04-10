@@ -1,0 +1,26 @@
+MySQL is an open-source database management system, using a relational database and SQL (Structured Query Language) to manage its data.
+
+Step 1 — Installing MySQL
+sudo apt-get update
+sudo apt-get install mysql-server
+
+Step 2 — Configuring MySQL
+mysql_secure_installation
+
+Step 3 — Testing MySQL
+systemctl status mysql.service
+
+Step 4 - Create database
+CREATE DATABASE dbname;
+
+Step 5 - Create user and grant assess right
+CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'new_password';
+GRANT ALL ON dbname.* TO 'new_user'@'localhost';
+
+CREATE USER 'new_user'@'%' IDENTIFIED BY 'new_password';
+GRANT ALL ON dbname.* TO 'new_user'@'%';
+
+Step 6 - Configurate for remote connection
+comment out bind-address = 127.0.0.1 in mysqld.cnf in /etc/mysql/mysql.conf.d
+
+Step 7 - Connect MySQL with MySQLWorkbench
