@@ -20,7 +20,7 @@ GRANT ALL ON dbname.* TO 'new_user'@'localhost';
 CREATE USER 'new_user'@'%' IDENTIFIED BY 'new_password';
 GRANT ALL ON dbname.* TO 'new_user'@'%';
 
-Step 6 - Configurate for remote connection
+Step 6 - Configurate for remote connection (reset it in production environment)
 comment out bind-address = 127.0.0.1 in mysqld.cnf in /etc/mysql/mysql.conf.d
 
 Step 7 - Connect MySQL with MySQLWorkbench
