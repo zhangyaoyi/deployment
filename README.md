@@ -1,3 +1,3 @@
 # deployment
 
-1. install mysql in linux server
+1. Setup MySQL on Ubuntu 16.04
